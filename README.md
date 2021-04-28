@@ -1,46 +1,190 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h1  align="center">Teste técnico Front-end</h1>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p  align="center">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+> Uma aplicação de um contador de café compartilhado.
+
+
+
+
+
+<br />
+
+
+
+
+
+
+# :pushpin: Roadmap
+
+
+
+
+
+* [Features](#rocket-features)
+
+
+
+* [Instalação](#construction_worker-instalação)
+
+
+
+
+* [Como Começar](#runner-começar)
+
+
+
+
+
+* [License](#closed_book-license)
+
+
+
+
+
+
+# :rocket: Features
+
+
+
+
+
+* 📝  Logar com os dados.
+
+* 📝   Tomar café.
+
+* 📝   Persistir na sessão.
+
+
+
+## Tecnologias
+
+
+
+* ⚛ **ReactJS**
+
+* 🕸 **Redux**
+
+* 💅 **Styled-components**
+
+* 💆 **Lint**
+
+
+
+
+
+
+# :construction_worker: Instalação
+
+
+
+
+
+**Você precisa ter instalado [Node.js](https://nodejs.org/en/download/) ,[Git](https://git-scm.com/downloads) , [Yarn](https://yarnpkg.com/) primeiro para rodar os comandos**
+
+
+
+
+
+`git clone https://github.com/julianoalvescode/wooza.git`
+
+
+
+
+
+Os URLs SSH fornecem acesso a um repositório Git via SSH, um protocolo seguro. Se você usa uma chave SSH registrada na sua conta Github, clone o projeto usando este comando:
+
+
+
+
+
+`git clone git@github.com:julianoalvescode/wooza.git`
+
+
+
+
+
+**Instalar dependências**
+
+
+
+
+
+```yarn install```
+
+
+`````npm install -g json-server`````
+
+
+
+
+
+
+
+
+
+# :runner: Começar
+
+
+
+
+
+
+
+Execute o seguinte comando para iniciar a aplicação num ambiente de desenvolvimento:
+
+
+  ```json-server --watch src/services/mocks/db.json```
+
+
+```yarn start```
+
+
+
+Em seguida, no seu navegador, introduza
+
+
+
+http://localhost:3001
+
+
+
+
+# :closed_book: License
+
+
+
+
+Feito em 2021.
+
+
+
+Este projeto encontra-se no âmbito do MIT license
+
+
+
+
+
+Feito com amor por [Juliano Alves](https://github.com/julianoalvescode) 💜🚀
