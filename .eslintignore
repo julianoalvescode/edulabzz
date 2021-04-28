@@ -1,0 +1,11 @@
+/*.js
+**/*.js
+**/*.spec.tsx
+/*.spec.tsx
+**/*.spec.ts
+/*.spec.ts
+node_modules
+build
+/src/react-app-env.d.ts
+/src/reportWebVitals.ts
+/src/stories/**

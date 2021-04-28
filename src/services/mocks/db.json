@@ -1,0 +1,21 @@
+{
+    "users": [{
+            "id": 1,
+            "name": "Juliano Alves",
+            "email": "contato.julianoalvess@gmail.com",
+            "password": "123",
+            "avatar": "https://avatars.githubusercontent.com/u/43914533?v=4",
+            "cargo": "Dev Front-end",
+            "coffe": 0
+        },
+        {
+            "id": 2,
+            "name": "Lucas Ferreira",
+            "email": "lucasferreira@gmail.com",
+            "password": "12345678",
+            "avatar": "http://pm1.narvii.com/6352/369e2b6a6dcf9877015feddf92d5c863629d24ba_00.jpg",
+            "cargo": "Dev Back-end",
+            "coffe": 0
+        }
+    ]
+}
