@@ -19,7 +19,7 @@ const App: React.FC = () => {
 
     return (
         <>
-            <I18nProvider locale={language && 'pt-BR'}>
+            <I18nProvider locale={language ? language : 'pt-BR'}>
                 <Router>
                     <ThemeProvider theme={defaultTheme}>
                         <GlobalStyle />

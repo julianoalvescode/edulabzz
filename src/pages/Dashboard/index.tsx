@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Coffe } from 'components';
+import * as C from 'components';
 
 export function Dashboard(): React.ReactElement {
+    const [isLoading, SetLoading] = useState<boolean>(true);
     return (
         <>
-            <Coffe />
+            <C.Coffe SetLoading={SetLoading} />
+            {isLoading && <C.Loading />}
         </>
     );
 }

@@ -5,8 +5,8 @@
     },
     "extends": [
         "plugin:react/recommended",
-		"plugin:@typescript-eslint/recommended",
-		"plugin:prettier/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
         "plugin:import/typescript"
     ],
     "parser": "@typescript-eslint/parser",
@@ -17,25 +17,19 @@
         "ecmaVersion": 12,
         "sourceType": "module"
     },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-				"react-hooks",
-				"prettier"
-    ],
+    "plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
     "rules": {
-		"prettier/prettier": "error",
-		"react-hooks/rules-of-hooks": "error",
-		"react-hooks/exhaustive-deps": "warn",
-		"react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
-		"import/prefer-default-export": "off",
+        "prettier/prettier": "error",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+        "import/prefer-default-export": "off",
         "@typescript-eslint/no-use-before-define": "off",
         "@typescript-eslint/no-explicit-any": "off"
-
     },
-		"settings": {
-			"import/resolver": {
-				"typescript": {}
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
     }
-  }
 }

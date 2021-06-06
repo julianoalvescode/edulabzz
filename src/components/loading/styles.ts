@@ -2,10 +2,17 @@ import styled from 'styled-components';
 import * as I from 'shared/interfaces';
 
 export const Container = styled.div`
+    background-color: #fff;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
 `;
 
 export const Load = styled.div<I.ITheme>`

@@ -13,7 +13,6 @@ import { Email, Password } from 'components/input';
 
 import Logo from 'static/images/logo.svg';
 import * as S from './styles';
-import * as A from 'shared/actions';
 
 import { CSSTransition } from 'react-transition-group';
 
@@ -31,12 +30,13 @@ export const Sign: React.FC = () => {
         email: string;
         password: string;
     }): Promise<void> => {
-        const response = await UserService.UserLogin(data.email, data.password);
+        const response = await UserService.UserLogin(
+            data.email,
+            data.password,
+            dispatch
+        );
 
-        if (response) {
-            dispatch({ type: A.UserActions.Login, data: response });
-            history.push('/dashboard');
-        }
+        response && history.push('/dashboard');
     };
 
     return (

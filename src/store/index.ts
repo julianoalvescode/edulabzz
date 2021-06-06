@@ -31,7 +31,7 @@ const rootReducer = combineReducers({
 });
 
 const initialState: I.State = {
-    language: 'pt-BR',
+    language: navigator.language,
     user: null,
     theme: 'primary',
 };

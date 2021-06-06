@@ -8,7 +8,11 @@ export enum UserActions {
 
 export interface UserActionsService {
     getCoffe(): void;
-    findUser(email: string, password: string): Promise<I.User | boolean>;
-    UserLogin(email: string, password: string): Promise<I.User | boolean>;
+    findUser(email: string, password: string): Promise<I.User | boolean | void>;
+    UserLogin(
+        email: string,
+        password: string,
+        dispatch: any
+    ): Promise<I.User | boolean | void>;
     getUser(): Promise<I.User[]>;
 }

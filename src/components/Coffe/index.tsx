@@ -7,11 +7,13 @@ import { Card } from 'components';
 import { ToastMessage } from 'utils';
 import { UserService } from 'services';
 import * as I from 'shared/interfaces';
-import { Loading } from 'components';
 
-export function Coffe(): React.ReactElement {
+export function Coffe({
+    SetLoading,
+}: {
+    SetLoading(data: boolean): void;
+}): React.ReactElement {
     const [listCoffe, SetListCoffe] = useState<I.Coffe[]>([]);
-    const [isLoading, SetLoading] = useState<boolean>(false);
 
     useEffect(() => {
         SetLoading(true);
@@ -19,7 +21,7 @@ export function Coffe(): React.ReactElement {
             const coffe = await UserService.getCoffe();
             SetListCoffe(coffe);
             SetLoading(false);
-        }, 3000);
+        }, 800);
     }, []);
 
     const dispatch = useDispatch();
@@ -32,19 +34,11 @@ export function Coffe(): React.ReactElement {
     return (
         <>
             <S.Container>
-                {!isLoading ? (
-                    listCoffe.map((i) => (
-                        <>
-                            <Card
-                                key={i.id}
-                                src={i.imageUrl}
-                                onClick={addCoffe}
-                            />
-                        </>
-                    ))
-                ) : (
-                    <Loading />
-                )}
+                {listCoffe.map((i) => (
+                    <>
+                        <Card key={i.id} src={i.imageUrl} onClick={addCoffe} />
+                    </>
+                ))}
             </S.Container>
         </>
     );

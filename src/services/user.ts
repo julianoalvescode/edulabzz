@@ -2,14 +2,20 @@ import { toast } from 'react-toastify';
 import * as I from 'shared/interfaces';
 import * as A from 'shared/actions';
 
+import { createBrowserHistory } from 'history';
+
 class User implements A.UserActionsService {
+    public history: any;
+
+    constructor() {
+        this.history = createBrowserHistory();
+    }
+
     public async getUser(): Promise<I.User[]> {
         const response = await fetch(process.env.REACT_APP_URL_DEV + 'users', {
             method: 'GET',
         });
-
         const data = await response.json();
-
         return data;
     }
 
@@ -17,22 +23,18 @@ class User implements A.UserActionsService {
         const response = await fetch(process.env.REACT_APP_URL_DEV + 'coffes', {
             method: 'GET',
         });
-
         const data = await response.json();
-
         return data;
     }
 
     public async findUser(
         email: string,
         password: string
-    ): Promise<I.User | boolean> {
+    ): Promise<I.User | boolean | void> {
         const data = await this.getUser();
-
         const user = data.find(
             (params) => email === params.email && password === params.password
         );
-
         if (user !== undefined) {
             return user;
         } else {
@@ -42,12 +44,13 @@ class User implements A.UserActionsService {
 
     public async UserLogin(
         email: string,
-        password: string
-    ): Promise<I.User | boolean> {
+        password: string,
+        dispatch: any
+    ): Promise<I.User | boolean | void> {
         const response = await this.findUser(email, password);
-
         if (response) {
-            return response;
+            dispatch({ type: A.UserActions.Login, data: response });
+            return true;
         } else {
             toast.warn('Usuário não encontrado', {
                 position: 'top-right',
