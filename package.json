@@ -1,109 +1,112 @@
 {
-  "name": "contador-cafe",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@hookform/resolvers": "^2.4.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "@types/react-router-dom": "^5.1.7",
-    "json-server": "^0.16.3",
-    "polished": "^4.1.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-hook-form": "^7.3.3",
-    "react-icons": "^4.2.0",
-    "react-intl": "^5.16.0",
-    "react-redux": "^7.2.3",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "react-toastify": "^7.0.4",
-    "react-transition-group": "^4.4.1",
-    "redux": "^4.0.5",
-    "redux-persist": "^6.0.0",
-    "redux-persist-transform-expire-in": "^1.1.0",
-    "styled-components": "^5.2.3",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1",
-    "yup": "^0.32.9"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint:fix": "eslint --fix --ext .ts,.tsx .",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "postinstall": "husky install",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "src/**/*.{js,ts,jsx,tsx}": ["eslint --fix"]
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
+    "name": "contador-cafe",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@hookform/resolvers": "^2.4.0",
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^12.1.10",
+        "@types/jest": "^26.0.15",
+        "@types/node": "^12.0.0",
+        "@types/react": "^17.0.0",
+        "@types/react-dom": "^17.0.0",
+        "@types/react-router-dom": "^5.1.7",
+        "json-server": "^0.16.3",
+        "polished": "^4.1.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-hook-form": "^7.3.3",
+        "react-icons": "^4.2.0",
+        "react-intl": "^5.16.0",
+        "react-redux": "^7.2.3",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "4.0.3",
+        "react-toastify": "^7.0.4",
+        "react-transition-group": "^4.4.1",
+        "redux": "^4.0.5",
+        "redux-persist": "^6.0.0",
+        "redux-persist-transform-expire-in": "^1.1.0",
+        "styled-components": "^5.2.3",
+        "typescript": "^4.1.2",
+        "web-vitals": "^1.0.1",
+        "yup": "^0.32.9"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "lint:fix": "eslint --fix --ext .ts,.tsx .",
+        "storybook": "start-storybook -p 6006 -s public",
+        "build-storybook": "build-storybook -s public",
+        "postinstall": "husky install",
+        "prepare": "husky install"
+    },
+    "lint-staged": {
+        "src/**/*.{js,ts,jsx,tsx}": [
+            "eslint --fix"
+        ]
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
         ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^12.1.1",
-    "@commitlint/config-conventional": "^12.1.1",
-    "@storybook/addon-actions": "^6.2.9",
-    "@storybook/addon-essentials": "^6.2.9",
-    "@storybook/addon-links": "^6.2.9",
-    "@storybook/node-logger": "^6.2.9",
-    "@storybook/preset-create-react-app": "^3.1.7",
-    "@storybook/react": "^6.2.9",
-    "@types/react-intl": "^3.0.0",
-    "@types/react-redux": "^7.1.16",
-    "@types/react-transition-group": "^4.4.1",
-    "@types/redux": "^3.6.0",
-    "@types/redux-persist": "^4.3.1",
-    "@types/styled-components": "^5.1.9",
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
-    "@typescript-eslint/parser": "^4.22.0",
-    "eslint": "^7.24.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^8.2.0",
-    "eslint-import-resolver-typescript": "^2.4.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^2.5.0",
-    "husky": "^6.0.0",
-    "lint-staged": "^10.5.4",
-    "pinst": "^2.1.6",
-    "prettier": "^2.2.1",
-    "stylelint": "^13.13.0"
-  }
+        "overrides": [
+            {
+                "files": [
+                    "**/*.stories.*"
+                ],
+                "rules": {
+                    "import/no-anonymous-default-export": "off"
+                }
+            }
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^12.1.1",
+        "@commitlint/config-conventional": "^12.1.1",
+        "@storybook/addon-actions": "^6.2.9",
+        "@storybook/addon-essentials": "^6.2.9",
+        "@storybook/addon-links": "^6.2.9",
+        "@storybook/node-logger": "^6.2.9",
+        "@storybook/preset-create-react-app": "^3.1.7",
+        "@storybook/react": "^6.2.9",
+        "@types/react-intl": "^3.0.0",
+        "@types/react-redux": "^7.1.16",
+        "@types/react-transition-group": "^4.4.1",
+        "@types/redux": "^3.6.0",
+        "@types/redux-persist": "^4.3.1",
+        "@types/styled-components": "^5.1.9",
+        "@typescript-eslint/eslint-plugin": "^4.22.0",
+        "@typescript-eslint/parser": "^4.22.0",
+        "eslint": "^7.24.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-prettier": "^8.2.0",
+        "eslint-import-resolver-typescript": "^2.4.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-react": "^7.19.0",
+        "eslint-plugin-react-hooks": "^2.5.0",
+        "husky": "^6.0.0",
+        "lint-staged": "^10.5.4",
+        "pinst": "^2.1.6",
+        "prettier": "^2.2.1",
+        "pretty-quick": "^3.1.0",
+        "stylelint": "^13.13.0"
+    }
 }
