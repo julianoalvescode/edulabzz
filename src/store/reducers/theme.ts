@@ -1,6 +1,8 @@
+import * as I from 'shared/actions';
+
 export const theme = (
     state = 'primary',
-    action: { type: 'Theme.Change'; data: string }
+    action: { type: I.ThemeActions; data: string }
 ): string => {
     switch (action.type) {
         case 'Theme.Change':

@@ -13,8 +13,7 @@ import { Email, Password } from 'components/input';
 
 import Logo from 'static/images/logo.svg';
 import * as S from './styles';
-
-import { toast } from 'react-toastify';
+import * as A from 'shared/actions';
 
 import { CSSTransition } from 'react-transition-group';
 
@@ -35,18 +34,8 @@ export const Sign: React.FC = () => {
         const response = await UserService.UserLogin(data.email, data.password);
 
         if (response) {
-            dispatch({ type: 'User.Login', data: response });
+            dispatch({ type: A.UserActions.Login, data: response });
             history.push('/dashboard');
-        } else {
-            toast.warn('Usuário não encontrado', {
-                position: 'top-right',
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-            });
         }
     };
 

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import * as S from './styles';
-
 import * as I from 'shared/interfaces';
 
 export function Button({

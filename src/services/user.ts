@@ -1,6 +1,8 @@
+import { toast } from 'react-toastify';
 import * as I from 'shared/interfaces';
+import * as A from 'shared/actions';
 
-class User implements I.UserActions {
+class User implements A.UserActionsService {
     public async getUser(): Promise<I.User[]> {
         const response = await fetch(process.env.REACT_APP_URL_DEV + 'users', {
             method: 'GET',
@@ -23,7 +25,7 @@ class User implements I.UserActions {
         return data;
     }
 
-    public async UserLogin(
+    public async findUser(
         email: string,
         password: string
     ): Promise<I.User | boolean> {
@@ -36,6 +38,28 @@ class User implements I.UserActions {
         if (user !== undefined) {
             return user;
         } else {
+            return false;
+        }
+    }
+
+    public async UserLogin(
+        email: string,
+        password: string
+    ): Promise<I.User | boolean> {
+        const response = await this.findUser(email, password);
+
+        if (response) {
+            return response;
+        } else {
+            toast.warn('Usuário não encontrado', {
+                position: 'top-right',
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
             return false;
         }
     }
