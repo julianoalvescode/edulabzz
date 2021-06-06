@@ -12,14 +12,14 @@ import { GlobalStyle, defaultTheme } from 'styles';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { IState } from 'shared/interfaces';
+import * as I from 'shared/interfaces';
 
 const App: React.FC = () => {
-    const { language } = useSelector((state: IState) => state);
+    const { language } = useSelector((state: I.State) => state);
 
     return (
         <>
-            <I18nProvider locale={language}>
+            <I18nProvider locale={language && 'pt-BR'}>
                 <Router>
                     <ThemeProvider theme={defaultTheme}>
                         <GlobalStyle />

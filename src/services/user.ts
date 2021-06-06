@@ -1,8 +1,20 @@
-import { IUserActions, IUser } from 'shared/interfaces';
+import * as I from 'shared/interfaces';
 
-class User implements IUserActions {
-    public async getUser(): Promise<IUser[]> {
-        const response = await fetch('http://localhost:3000/users', {
+class User implements I.UserActions {
+    public async getUser(): Promise<I.User[]> {
+        const response = await fetch(process.env.REACT_APP_URL_DEV + 'users', {
+            method: 'GET',
+        });
+
+        console.log(process.env);
+
+        const data = await response.json();
+
+        return data;
+    }
+
+    public async getCoffe(): Promise<I.Coffe[]> {
+        const response = await fetch(process.env.REACT_APP_URL_DEV + 'coffes', {
             method: 'GET',
         });
 
@@ -14,7 +26,7 @@ class User implements IUserActions {
     public async UserLogin(
         email: string,
         password: string
-    ): Promise<IUser | boolean> {
+    ): Promise<I.User | boolean> {
         const data = await this.getUser();
 
         const user = data.find(

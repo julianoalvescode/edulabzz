@@ -87,7 +87,6 @@ export const Button = styled.button<ITheme>`
                 return `
                 background-color: ${props.theme.palette.secondary.main};
         `;
-            case VARIANT.PRIMARY:
             default:
                 return `
                 background-color: ${props.theme.palette.primary.main};

@@ -44,7 +44,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src/**/*.{js,ts,jsx,tsx}": ["eslint --fix", "yarn test --watchAll=false --findRelatedTests --bail"]
+    "src/**/*.{js,ts,jsx,tsx}": ["eslint --fix"]
   },
   "eslintConfig": {
     "extends": [

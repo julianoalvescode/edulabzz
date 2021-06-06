@@ -1,4 +1,4 @@
-export interface IAvatar {
+export interface Avatar {
     url: string | undefined;
 
     cargo: string | undefined;

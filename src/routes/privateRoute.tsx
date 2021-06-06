@@ -2,7 +2,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Redirect, Route } from 'react-router-dom';
-import { IState } from 'shared/interfaces';
+import * as I from 'shared/interfaces';
+import { LayoutDashboard } from 'layouts';
 export const PrivateRoute = ({
     path,
     component,
@@ -12,11 +13,17 @@ export const PrivateRoute = ({
     component: React.FC;
     exact?: boolean;
 }): any => {
-    const user = useSelector((state: IState) => state.user);
+    const user = useSelector((state: I.State) => state.user);
 
     if (user?.id === undefined) {
         return <Redirect to="/login"></Redirect>;
     }
 
-    return <Route path={path} component={component} exact={exact}></Route>;
+    return (
+        <>
+            <LayoutDashboard>
+                <Route path={path} component={component} exact={exact}></Route>
+            </LayoutDashboard>
+        </>
+    );
 };

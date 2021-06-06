@@ -6,16 +6,14 @@ import expireIn from 'redux-persist-transform-expire-in';
 
 import storage from 'redux-persist/lib/storage';
 import sessionStorage from 'redux-persist/lib/storage/session';
-import { IState } from '../shared/interfaces';
+import * as I from 'shared/interfaces';
 
-import { timeSpan } from '../utils';
+import { timeSpan } from 'utils';
 
-const expireTime = timeSpan('180m'); // expire in 2h
+const expireTime = timeSpan('10m');
 const expirationKey = 'expirationKeyCoffe';
 
-import { language } from './language';
-import { user } from './user';
-import { theme } from './theme';
+import { language, user, theme } from './reducers';
 
 const rootPersistConfig = {
     key: 'coffe-count',
@@ -32,7 +30,7 @@ const rootReducer = combineReducers({
     theme: theme,
 });
 
-const initialState: IState = {
+const initialState: I.State = {
     language: 'pt-BR',
     user: null,
     theme: 'primary',

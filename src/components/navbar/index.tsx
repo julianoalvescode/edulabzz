@@ -4,18 +4,13 @@ import { Avatar } from 'components';
 
 import * as S from './styles';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { IState } from 'shared/interfaces';
+import { useSelector } from 'react-redux';
+import * as I from 'shared/interfaces';
 
 import LogoWhite from 'static/images/logo-white.svg';
 
 export const Navbar: React.FC = () => {
-    const user = useSelector((state: IState) => state.user);
-    const dispatch = useDispatch();
-
-    const isLogout = (): void => {
-        dispatch({ type: 'User.Logout' });
-    };
+    const user = useSelector((state: I.State) => state.user);
 
     return (
         <>

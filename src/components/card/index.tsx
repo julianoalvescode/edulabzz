@@ -1,13 +1,13 @@
 import React from 'react';
-import { ICard } from 'shared/interfaces';
+import * as I from 'shared/interfaces';
 
 import * as S from './styles';
 
 import { FormattedMessage } from 'react-intl';
-export function Card({ src, onClick }: ICard): React.ReactElement {
+export function Card({ src, onClick, key }: I.Card): React.ReactElement {
     return (
         <>
-            <S.Box>
+            <S.Box key={key}>
                 <S.BoxImg>
                     <img loading="lazy" src={src} alt="Café" />
                 </S.BoxImg>

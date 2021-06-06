@@ -17,5 +17,18 @@
             "cargo": "Dev Back-end",
             "coffe": 0
         }
-    ]
+    ],
+    "coffes": [{
+        "id": 1,
+        "imageUrl": "https://www.starbucksathome.com/br/sites/default/files/styles/plp_desktop/public/2021-03/C5_7613036942720_BR%2C%20AR%2C%20US%2C%20UY_C1C1_website.jpg?itok=C3-8rCVB"
+    },
+    {
+        "id": 2,
+        "imageUrl": "https://www.starbucksathome.com/br/sites/default/files/styles/plp_desktop/public/2021-03/C5_7613036943376_BR%2C%20AR%2C%20US%2C%20UY_C1C1_website.jpg?itok=-hdx-xMw"
+    },
+    {
+        "id": 3,
+        "imageUrl": "https://www.starbucksathome.com/br/sites/default/files/styles/plp_desktop/public/2021-03/C5_7613036941419_BR%2C%20AR%2C%20US%2C%20UY_C1C1_website_0.jpg?itok=Gl_qu3rf"
+    }
+]
 }

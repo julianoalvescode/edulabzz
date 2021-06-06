@@ -1,11 +1,11 @@
-export interface IState {
+export interface State {
     language: string;
-    user: IUser | null;
+    user: User | null;
 
     theme: 'primary' | 'dark';
 }
 
-export interface IUser {
+export interface User {
     name: string;
     id: string;
     coffe: number;

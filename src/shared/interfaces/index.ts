@@ -6,3 +6,4 @@ export * from './button';
 export * from './user';
 export * from './avatar';
 export * from './card';
+export * from './coffe';

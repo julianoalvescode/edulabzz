@@ -2,14 +2,14 @@ import React from 'react';
 
 import * as S from './styles';
 
-import { IAvatar, IState } from 'shared/interfaces';
+import * as I from 'shared/interfaces';
 
 import { BiCoffeeTogo } from 'react-icons/bi';
 
 import { useSelector } from 'react-redux';
 
-export const Avatar = ({ url, cargo, nome }: IAvatar): React.ReactElement => {
-    const user = useSelector((state: IState) => state.user);
+export const Avatar = ({ url, cargo, nome }: I.Avatar): React.ReactElement => {
+    const user = useSelector((state: I.State) => state.user);
 
     return (
         <>

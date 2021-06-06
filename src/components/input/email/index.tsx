@@ -1,13 +1,13 @@
 import React from 'react';
 
 import * as S from './../styles';
-import { IEmail } from 'shared/interfaces';
+import * as I from 'shared/interfaces';
 
 import { FormattedMessage } from 'react-intl';
 export function Email({
     placeholder = 'Endereço de e-mail',
     register,
-}: IEmail): React.ReactElement {
+}: I.Email): React.ReactElement {
     return (
         <>
             <S.Container>

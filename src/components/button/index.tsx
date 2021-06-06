@@ -2,13 +2,13 @@ import React from 'react';
 
 import * as S from './styles';
 
-import { IButton } from 'shared/interfaces';
+import * as I from 'shared/interfaces';
 
 export function Button({
     type = 'button',
     message = 'Continuar',
     onClick,
-}: IButton): React.ReactElement {
+}: I.Button): React.ReactElement {
     return (
         <>
             {onClick ? (

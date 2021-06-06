@@ -4,3 +4,4 @@ export * from './button';
 export * from './avatar';
 export * from './Coffe';
 export * from './card';
+export * from './loading';

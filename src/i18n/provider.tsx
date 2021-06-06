@@ -5,9 +5,9 @@ import { IntlProvider } from 'react-intl';
 import { LOCALES } from './locales';
 import messages from './messages';
 
-import { IProvider } from 'shared/interfaces';
+import * as I from 'shared/interfaces';
 
-const Provider: React.FC<IProvider> = ({
+const Provider: React.FC<I.Provider> = ({
     children,
     locale = LOCALES.ENGLISH,
 }: {

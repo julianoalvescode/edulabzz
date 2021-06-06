@@ -1,9 +1,9 @@
-import { IUser } from 'shared/interfaces';
+import * as I from 'shared/interfaces';
 
 export const user = (
-    state: IUser | null = null,
-    action: { type: 'User.Login' | 'User.Logout' | 'User.Coffe'; data: IUser }
-): IUser | null => {
+    state: I.User | null = null,
+    action: { type: 'User.Login' | 'User.Logout' | 'User.Coffe'; data: I.User }
+): I.User | null => {
     switch (action.type) {
         case 'User.Login':
             return action.data;
