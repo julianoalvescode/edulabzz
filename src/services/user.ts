@@ -8,8 +8,6 @@ class User implements A.UserActionsService {
             method: 'GET',
         });
 
-        console.log(process.env);
-
         const data = await response.json();
 
         return data;
