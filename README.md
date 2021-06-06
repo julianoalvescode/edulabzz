@@ -28,7 +28,7 @@
 
 ## Tecnologias
 
-- ⚛ **ReactJS**
+- ⚛ **ReactJS with Typescript**
 
 - 🕸 **Redux**
 
